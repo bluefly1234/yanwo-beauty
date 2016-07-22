@@ -104,9 +104,123 @@ new mo.Loader(sourceArr,{
         }
 
         function page2SlideIn() {
-            var page2SlideUpIn = new TimelineMax();
+            var page2SlideUpIn = new TimelineMax({
+                onComplete: function () {
+                    showArrow();
+                    // 上滑
+                    touch.on($("#page2"), 'swipeup', function(ev){
+                      console.log(ev.type + ' page2');
+                      hideArrow();
+                      page2SlideOut();
+                    });
+                }
+            });
             page2SlideUpIn.set('#page2', {display: 'block', autoAlpha: 1})
-            .fromTo('#page2', slideTime, {y: 1043}, {y: 0})
+            .set('#page2-content', {perspective: 500})
+            .fromTo('#page2', slideTime, {y: 1043}, {y: 0, onComplete: function () {
+                TweenMax.fromTo('#common-logo', 0.6, {autoAlpha: 0}, {autoAlpha: 1});
+            }})
+            .staggerFromTo('.page2-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
+            .fromTo('#page2-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+        }
+
+        function page2SlideOut() {
+            var page2SlideUpOut = new TimelineMax({
+                onStart: page3SlideIn
+            });
+            page2SlideUpOut.to('#page2', slideTime, {y: -1043})
+            .set('#page2', {display: 'none', autoAlpha: 0})
+        }
+
+        function page3SlideIn() {
+            var page3SlideUpIn = new TimelineMax({
+                onComplete: function () {
+                    showArrow();
+                    // 上滑
+                    touch.on($("#page3"), 'swipeup', function(ev){
+                      console.log(ev.type + ' page3');
+                      hideArrow();
+                      page3SlideOut();
+                    });
+                }
+            });
+            page3SlideUpIn.set('#page3', {display: 'block', autoAlpha: 1})
+            .set('#page3-content', {perspective: 500})
+            .fromTo('#page3', slideTime, {y: 1043}, {y: 0})
+            .staggerFromTo('.page3-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
+            .fromTo('#page3-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+        }
+
+        function page3SlideOut() {
+            var page3SlideUpOut = new TimelineMax({
+                onStart: page4SlideIn
+            });
+            page3SlideUpOut.to('#page3', slideTime, {y: -1043})
+            .set('#page3', {display: 'none', autoAlpha: 0})
+        }
+
+        function page4SlideIn() {
+            var page4SlideUpIn = new TimelineMax({
+                onComplete: function () {
+                    showArrow();
+                    // 上滑
+                    touch.on($("#page4"), 'swipeup', function(ev){
+                      console.log(ev.type + ' page4');
+                      hideArrow();
+                      page4SlideOut();
+                    });
+                }
+            });
+            page4SlideUpIn.set('#page4', {display: 'block', autoAlpha: 1})
+            .set('#page4-content', {perspective: 500})
+            .fromTo('#page4', slideTime, {y: 1043}, {y: 0})
+            .staggerFromTo('.page4-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
+            .fromTo('#page4-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+        }
+
+        function page4SlideOut() {
+            var page4SlideUpOut = new TimelineMax({
+                onStart: page5SlideIn
+            });
+            page4SlideUpOut.to('#page4', slideTime, {y: -1043})
+            .set('#page4', {display: 'none', autoAlpha: 0})
+        }
+
+        function page5SlideIn() {
+            var page5SlideUpIn = new TimelineMax({
+                onComplete: function () {
+                    showArrow();
+                    // 上滑
+                    touch.on($("#page5"), 'swipeup', function(ev){
+                      console.log(ev.type + ' page5');
+                      hideArrow();
+                      hidePage5();
+                    });
+                }
+            });
+            page5SlideUpIn.set(['#page56', '#page5'], {display: 'block', autoAlpha: 1})
+            .set('#page5-content', {perspective: 500})
+            .fromTo('#page56', slideTime, {y: 1043}, {y: 0})
+            .staggerFromTo('.page5-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
+            .fromTo('#page5-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+        }
+
+        function hidePage5() {
+            var page5Hide = new TimelineMax({
+                onComplete: showPage6
+            });
+            page5Hide.to('#page5', 0.6, {autoAlpha: 0})
+            .set('#page5', {display: 'none'})
+        }
+
+        function showPage6() {
+            var page6Show = new TimelineMax();
+            page6Show.set('#page6', {display: 'block', autoAlpha: 1})
+            .set('#page6-content', {perspective: 500})
+            .staggerFromTo('.page6-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
+            .fromTo('#page6-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+            .fromTo('#sign-btn', 0.6, {autoAlpha:0, y: -100}, {autoAlpha: 1, y: 0})
+            .fromTo('#rule-btn', 0.6, {autoAlpha:0, y: 100}, {autoAlpha: 1, y: 0}, '-=0.6')
         }
 
     });  //Document ready
