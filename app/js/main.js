@@ -122,6 +122,23 @@ new mo.Loader(sourceArr,{
             }})
             .staggerFromTo('.page2-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page2-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '800px', left: '-175px'})
+            .to('#bird', 2.5, {
+                bezier:[
+                    {left:100, top:760},
+                    {left:200, top:700},
+                    {left:280, top:640},
+                    {left:460, top:700},
+                    {left:640, top:740}
+                ],
+                ease:Power1.easeIn,
+                onStart: function () {
+                    birdFlap.play(0);
+                },
+                onComplete: function () {
+                    birdFlap.pause(0);
+                }
+            });
         }
 
         function page2SlideOut() {
@@ -149,6 +166,20 @@ new mo.Loader(sourceArr,{
             .fromTo('#page3', slideTime, {y: 1043}, {y: 0})
             .staggerFromTo('.page3-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page3-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '-185px', left: '0px'})
+            .to('#bird', 2, {
+                bezier:[
+                    {left:250, top:30},
+                    {left:640, top:40}
+                ],
+                ease:Power0.easeNone,
+                onStart: function () {
+                    birdFlap.play(0);
+                },
+                onComplete: function () {
+                    birdFlap.pause(0);
+                }
+            });
         }
 
         function page3SlideOut() {
@@ -176,6 +207,20 @@ new mo.Loader(sourceArr,{
             .fromTo('#page4', slideTime, {y: 1043}, {y: 0})
             .staggerFromTo('.page4-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page4-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '800px', left: '-175px'})
+            .to('#bird', 2, {
+                bezier:[
+                    {left:300, top:480},
+                    {left:640, top:420}
+                ],
+                ease:Power1.easeIn,
+                onStart: function () {
+                    birdFlap.play(0);
+                },
+                onComplete: function () {
+                    birdFlap.pause(0);
+                }
+            });
         }
 
         function page4SlideOut() {
@@ -203,6 +248,23 @@ new mo.Loader(sourceArr,{
             .fromTo('#page56', slideTime, {y: 1043}, {y: 0})
             .staggerFromTo('.page5-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page5-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '200px', left: '-175px'})
+            .to('#bird', 2.5, {
+                bezier:[
+                    {left:100, top:160},
+                    {left:200, top:100},
+                    {left:280, top:40},
+                    {left:460, top:100},
+                    {left:640, top:140}
+                ],
+                ease:Power1.easeIn,
+                onStart: function () {
+                    birdFlap.play(0);
+                },
+                onComplete: function () {
+                    birdFlap.pause(0);
+                }
+            });
         }
 
         function hidePage5() {
@@ -222,6 +284,39 @@ new mo.Loader(sourceArr,{
             .fromTo('#sign-btn', 0.6, {autoAlpha:0, y: -100}, {autoAlpha: 1, y: 0})
             .fromTo('#rule-btn', 0.6, {autoAlpha:0, y: 100}, {autoAlpha: 1, y: 0}, '-=0.6')
         }
+
+        // 小鸟振翅
+        var birdFlap = new TimelineMax({
+            paused: true,
+            repeat: -1,
+            repeatDelay: 0.1
+        });
+        birdFlap.add('flapStart')
+        .set('#bird1', {autoAlpha: 1}, 'flapStart')
+        .set('#bird2', {autoAlpha: 0}, 'flapStart')
+        .set('#bird3', {autoAlpha: 0}, 'flapStart')
+        .set('#bird4', {autoAlpha: 0}, 'flapStart')
+        .set('#bird5', {autoAlpha: 0}, 'flapStart')
+        .set('#bird1', {autoAlpha: 0}, 'flapStart+=0.1')
+        .set('#bird2', {autoAlpha: 1}, 'flapStart+=0.1')
+        .set('#bird3', {autoAlpha: 0}, 'flapStart+=0.1')
+        .set('#bird4', {autoAlpha: 0}, 'flapStart+=0.1')
+        .set('#bird5', {autoAlpha: 0}, 'flapStart+=0.1')
+        .set('#bird1', {autoAlpha: 0}, 'flapStart+=0.2')
+        .set('#bird2', {autoAlpha: 0}, 'flapStart+=0.2')
+        .set('#bird3', {autoAlpha: 1}, 'flapStart+=0.2')
+        .set('#bird4', {autoAlpha: 0}, 'flapStart+=0.2')
+        .set('#bird5', {autoAlpha: 0}, 'flapStart+=0.2')
+        .set('#bird1', {autoAlpha: 0}, 'flapStart+=0.3')
+        .set('#bird2', {autoAlpha: 0}, 'flapStart+=0.3')
+        .set('#bird3', {autoAlpha: 0}, 'flapStart+=0.3')
+        .set('#bird4', {autoAlpha: 1}, 'flapStart+=0.3')
+        .set('#bird5', {autoAlpha: 0}, 'flapStart+=0.3')
+        .set('#bird1', {autoAlpha: 0}, 'flapStart+=0.4')
+        .set('#bird2', {autoAlpha: 0}, 'flapStart+=0.4')
+        .set('#bird3', {autoAlpha: 0}, 'flapStart+=0.4')
+        .set('#bird4', {autoAlpha: 0}, 'flapStart+=0.4')
+        .set('#bird5', {autoAlpha: 1}, 'flapStart+=0.4')
 
     });  //Document ready
 })(jQuery);
