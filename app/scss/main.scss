@@ -409,6 +409,60 @@ $page3-sprite-dimensions: true;
     left: 4px;
 }
 
-#cover, #page2, #page3 {
+// page4 sprite 设置
+$page4-layout:smart;
+$page4-spacing:10px;
+$page4-sprite-dimensions: true;
+@import "page4/*.png";
+@include  all-page4-sprites;
+
+#page4-bg {
+    top: 0;
+    left: 0;
+    $page4-bg: '../images/page4-bg.jpg';
+    width: image-width($page4-bg);
+    height: image-height($page4-bg);
+    background-image: url($page4-bg);
+}
+
+#page4-content {
+    top: 102px;
+    left: 276px;
+    width: 300px;
+    height: 362px;
+    // background: rgba(255, 0, 0, 0.3);
+}
+
+#page4-line {
+    top: 18px;
+    left: 81px;
+}
+
+#page4-content1 {
+    top: 14px;
+    left: 257px;
+}
+
+#page4-content2 {
+    top: 15px;
+    left: 201px;
+}
+
+#page4-content3 {
+    top: 15px;
+    left: 145px;
+}
+
+#page4-content4 {
+    top: 14px;
+    left: 89px;
+}
+
+#page4-content5 {
+    top: 0;
+    left: 0;
+}
+
+#cover, #page2, #page3, #page4 {
     display: none;
 }
