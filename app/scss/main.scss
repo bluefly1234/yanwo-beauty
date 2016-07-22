@@ -355,6 +355,60 @@ $page2-sprite-dimensions: true;
     left: 28px;
 }
 
-#cover, #page2 {
+// page3 sprite 设置
+$page3-layout:smart;
+$page3-spacing:10px;
+$page3-sprite-dimensions: true;
+@import "page3/*.png";
+@include  all-page3-sprites;
+
+#page3-bg {
+    top: 0;
+    left: 0;
+    $page3-bg: '../images/page3-bg.jpg';
+    width: image-width($page3-bg);
+    height: image-height($page3-bg);
+    background-image: url($page3-bg);
+}
+
+#page3-content {
+    top: 136px;
+    left: 258px;
+    width: 306px;
+    height: 328px;
+    // background: rgba(255, 0, 0, 0.3);
+}
+
+#page3-line {
+    top: 2px;
+    left: 0;
+}
+
+#page3-content1 {
+    top: 0;
+    left: 266px;
+}
+
+#page3-content2 {
+    top: 0;
+    left: 209px;
+}
+
+#page3-content3 {
+    top: 1px;
+    left: 131px;
+}
+
+#page3-content4 {
+    top: 0;
+    left: 81px;
+}
+
+#page3-content5 {
+    top: 0;
+    left: 4px;
+}
+
+#cover, #page2, #page3 {
     display: none;
 }
