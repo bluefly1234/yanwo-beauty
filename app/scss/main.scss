@@ -306,6 +306,55 @@ $cover-sprite-dimensions: true;
     right: 32px;
 }
 
-#cover {
+// page2 sprite 设置
+$page2-layout:smart;
+$page2-spacing:10px;
+$page2-sprite-dimensions: true;
+@import "page2/*.png";
+@include  all-page2-sprites;
+
+#page2-bg {
+    top: 0;
+    left: 0;
+    $page2-bg: '../images/page2-bg.jpg';
+    width: image-width($page2-bg);
+    height: image-height($page2-bg);
+    background-image: url($page2-bg);
+}
+
+#page2-content {
+    top: 98px;
+    left: 345px;
+    width: 240px;
+    height: 337px;
+    // background: rgba(255, 0, 0, 0.2);
+}
+
+#page2-line {
+    top: 0;
+    left: 0;
+}
+
+#page2-content1 {
+    top: 0;
+    left: 195px;
+}
+
+#page2-content2 {
+    top: 0;
+    left: 138px;
+}
+
+#page2-content3 {
+    top: 0;
+    left: 80px;
+}
+
+#common-logo {
+    top: 39px;
+    left: 28px;
+}
+
+#cover, #page2 {
     display: none;
 }

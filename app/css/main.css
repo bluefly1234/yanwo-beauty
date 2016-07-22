@@ -614,7 +614,82 @@ body {
   right: 32px;
 }
 
-#cover {
+.page2-sprite, .page2-content1, .page2-content2, .page2-content3, .page2-content4, .page2-line {
+  background-image: url('../images/page2-sda77c70712.png');
+  background-repeat: no-repeat;
+}
+
+.page2-content1 {
+  background-position: 0 0;
+  height: 310px;
+  width: 45px;
+}
+
+.page2-content2 {
+  background-position: 0 -310px;
+  height: 178px;
+  width: 42px;
+}
+
+.page2-content3 {
+  background-position: -109px -310px;
+  height: 222px;
+  width: 43px;
+}
+
+.page2-content4 {
+  background-position: -42px -310px;
+  height: 203px;
+  width: 67px;
+}
+
+.page2-line {
+  background-position: 0 -532px;
+  height: 335px;
+  width: 190px;
+}
+
+#page2-bg {
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 1043px;
+  background-image: url("../images/page2-bg.jpg");
+}
+
+#page2-content {
+  top: 98px;
+  left: 345px;
+  width: 240px;
+  height: 337px;
+}
+
+#page2-line {
+  top: 0;
+  left: 0;
+}
+
+#page2-content1 {
+  top: 0;
+  left: 195px;
+}
+
+#page2-content2 {
+  top: 0;
+  left: 138px;
+}
+
+#page2-content3 {
+  top: 0;
+  left: 80px;
+}
+
+#common-logo {
+  top: 39px;
+  left: 28px;
+}
+
+#cover, #page2 {
   display: none;
 }
 
