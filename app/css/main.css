@@ -422,13 +422,15 @@ body {
   transform: translate3d(-50%, -50%, 0);
 }
 
-#loading-num {
-  position: absolute;
-  top: 45%;
-  width: 100%;
+#loading {
+  background: #ffffff;
   z-index: 999;
-  text-align: center;
-  font-size: 56px;
+}
+
+#loading-logo {
+  top: 40%;
+  left: 50%;
+  margin-left: -83px;
 }
 
 #music-control, #arrow-up {
@@ -437,7 +439,7 @@ body {
 
 #loading-num {
   position: absolute;
-  top: 45%;
+  top: 50%;
   width: 100%;
   z-index: 999;
   text-align: center;
@@ -602,7 +604,7 @@ body {
   left: 4px;
 }
 
-.logo {
+.logo, #loading-logo {
   position: absolute;
   width: 166px;
   height: 63px;
@@ -1045,11 +1047,77 @@ body {
   left: 71px;
 }
 
-#cover, #page2, #page3, #page4, #page56 {
+.bird-sprite, .bird-1, .bird-2, .bird-3, .bird-4, .bird-5 {
+  background-image: url('../images/bird-sc38bbd845c.png');
+  background-repeat: no-repeat;
+}
+
+.bird-1 {
+  background-position: 0 -222px;
+  height: 134px;
+  width: 174px;
+}
+
+.bird-2 {
+  background-position: 0 0;
+  height: 108px;
+  width: 174px;
+}
+
+.bird-3 {
+  background-position: 0 -356px;
+  height: 151px;
+  width: 173px;
+}
+
+.bird-4 {
+  background-position: 0 -507px;
+  height: 173px;
+  width: 174px;
+}
+
+.bird-5 {
+  background-position: 0 -108px;
+  height: 114px;
+  width: 174px;
+}
+
+#bird {
+  position: absolute;
+  width: 174px;
+  height: 185px;
+}
+
+#bird1 {
+  top: 0;
+  left: 0;
+}
+
+#bird2 {
+  top: 23px;
+  left: 0;
+}
+
+#bird3 {
+  top: 29px;
+  left: 1px;
+}
+
+#bird4 {
+  top: 0;
+  left: 0;
+}
+
+#bird5 {
+  top: 14px;
+  left: 0;
+}
+
+#cover, #page2, #page3, #page4, #page56, #bird {
   display: none;
 }
 
-#page5-content, #page6 {
+#page5-content, #page6, #common-logo {
   visibility: hidden;
 }
 
