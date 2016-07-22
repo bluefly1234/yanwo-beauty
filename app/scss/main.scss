@@ -515,6 +515,65 @@ $page5-sprite-dimensions: true;
     left: 0;
 }
 
-#cover, #page2, #page3, #page4 {
+// page6 sprite 设置
+$page6-layout:smart;
+$page6-spacing:10px;
+$page6-sprite-dimensions: true;
+@import "page6/*.png";
+@include  all-page6-sprites;
+
+#page6-content {
+    top: 174px;
+    left: 151px;
+    width: 306px;
+    height: 352px;
+    // background: rgba(255, 0, 0, 0.2);
+}
+
+#page6-line {
+    top: 2px;
+    left: 50px;
+}
+
+#page6-content1 {
+    top: 0;
+    left: 253px;
+}
+
+#page6-content2 {
+    top: 3px;
+    left: 184px;
+}
+
+#page6-content3 {
+    top: 1px;
+    left: 123px;
+}
+
+#page6-content4 {
+    top: 5px;
+    left: 61px;
+}
+
+#page6-content5 {
+    top: 0;
+    left: 0;
+}
+
+#sign-btn {
+    top: 175px;
+    left: 65px;
+}
+
+#rule-btn {
+    top: 314px;
+    left: 71px;
+}
+
+#cover, #page2, #page3, #page4, #page56 {
     display: none;
+}
+
+#page5-content, #page6 {
+    visibility: hidden;
 }
