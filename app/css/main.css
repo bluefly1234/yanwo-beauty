@@ -948,12 +948,12 @@ body {
 }
 
 .page6-sprite, .page6-content1, .page6-content2, .page6-content3, .page6-content4, .page6-content5, .page6-line, .page6-rule-btn, .page6-sign-btn {
-  background-image: url('../images/page6-s83db92535b.png');
+  background-image: url('../images/page6-scce0ac0b0d.png');
   background-repeat: no-repeat;
 }
 
 .page6-content1 {
-  background-position: -96px -349px;
+  background-position: -97px -349px;
   height: 215px;
   width: 53px;
 }
@@ -971,7 +971,7 @@ body {
 }
 
 .page6-content4 {
-  background-position: -149px -349px;
+  background-position: -150px -349px;
   height: 241px;
   width: 42px;
 }
@@ -990,8 +990,8 @@ body {
 
 .page6-rule-btn {
   background-position: -54px -349px;
-  height: 142px;
-  width: 42px;
+  height: 143px;
+  width: 43px;
 }
 
 .page6-sign-btn {

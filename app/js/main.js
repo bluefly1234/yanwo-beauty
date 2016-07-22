@@ -19,7 +19,7 @@ var sourceArr = [
     'images/page4-bg.jpg',
     'images/page4-s4f8615222a.png',
     'images/page5-s2a8f395e7f.png',
-    'images/page6-s83db92535b.png',
+    'images/page6-scce0ac0b0d.png',
     'images/page56-bg.jpg',
     'media/bgmusic.mp3'
 ]; //需要加载的资源列表
@@ -136,6 +136,7 @@ new mo.Loader(sourceArr,{
                     birdFlap.play(0);
                 },
                 onComplete: function () {
+                    TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
             });
@@ -177,6 +178,7 @@ new mo.Loader(sourceArr,{
                     birdFlap.play(0);
                 },
                 onComplete: function () {
+                    TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
             });
@@ -218,6 +220,7 @@ new mo.Loader(sourceArr,{
                     birdFlap.play(0);
                 },
                 onComplete: function () {
+                    TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
             });
@@ -262,6 +265,7 @@ new mo.Loader(sourceArr,{
                     birdFlap.play(0);
                 },
                 onComplete: function () {
+                    TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
             });
