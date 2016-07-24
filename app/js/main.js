@@ -104,7 +104,7 @@ new mo.Loader(sourceArr,{
             var coverSlideUpOut = new TimelineMax({
                 onStart: page2SlideIn
             });
-            coverSlideUpOut.to('#cover', slideTime, {x: -640, ease: Power3.easeInOut})
+            coverSlideUpOut.to('#cover', slideTime, {x: -640, ease: Power2.easeInOut})
             .set('#cover', {display: 'none', autoAlpha: 0})
         }
 
@@ -124,17 +124,14 @@ new mo.Loader(sourceArr,{
             .set('#page2-content', {perspective: 500})
             .fromTo('#page2', slideTime, {x: 640}, {x: 0, onComplete: function () {
                 TweenMax.fromTo('#common-logo', 0.6, {autoAlpha: 0}, {autoAlpha: 1});
-            }, ease: Power3.easeOut})
+            }, ease: Power2.easeOut})
             .staggerFromTo('.page2-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page2-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
-            .set('#bird', {display: 'block', autoAlpha: 1, top: '800px', left: '-175px'})
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '300px', left: '-175px'})
             .to('#bird', 2.5, {
                 bezier:[
-                    {left:100, top:760},
-                    {left:200, top:700},
-                    {left:280, top:640},
-                    {left:460, top:700},
-                    {left:640, top:740}
+                    {left:300, top:440},
+                    {left:640, top:480}
                 ],
                 ease:Power1.easeIn,
                 onStart: function () {
@@ -151,7 +148,7 @@ new mo.Loader(sourceArr,{
             var page2SlideUpOut = new TimelineMax({
                 onStart: page3SlideIn
             });
-            page2SlideUpOut.to('#page2', slideTime, {x: -640, ease: Power3.easeInOut})
+            page2SlideUpOut.to('#page2', slideTime, {x: -640, ease: Power2.easeInOut})
             .set('#page2', {display: 'none', autoAlpha: 0})
         }
 
@@ -169,14 +166,14 @@ new mo.Loader(sourceArr,{
             });
             page3SlideUpIn.set('#page3', {display: 'block', autoAlpha: 1})
             .set('#page3-content', {perspective: 500})
-            .fromTo('#page3', slideTime, {x: 640}, {x: 0, ease: Power3.easeOut})
+            .fromTo('#page3', slideTime, {x: 640}, {x: 0, ease: Power2.easeOut})
             .staggerFromTo('.page3-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page3-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
-            .set('#bird', {display: 'block', autoAlpha: 1, top: '-185px', left: '0px'})
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '150px', left: '-175px'})
             .to('#bird', 2, {
                 bezier:[
-                    {left:250, top:30},
-                    {left:640, top:40}
+                    {left:200, top:440},
+                    {left:640, top:480}
                 ],
                 ease:Power0.easeNone,
                 onStart: function () {
@@ -193,7 +190,7 @@ new mo.Loader(sourceArr,{
             var page3SlideUpOut = new TimelineMax({
                 onStart: page4SlideIn
             });
-            page3SlideUpOut.to('#page3', slideTime, {x: -640, ease: Power3.easeInOut})
+            page3SlideUpOut.to('#page3', slideTime, {x: -640, ease: Power2.easeInOut})
             .set('#page3', {display: 'none', autoAlpha: 0})
         }
 
@@ -211,11 +208,11 @@ new mo.Loader(sourceArr,{
             });
             page4SlideUpIn.set('#page4', {display: 'block', autoAlpha: 1})
             .set('#page4-content', {perspective: 500})
-            .fromTo('#page4', slideTime, {x: 640}, {x: 0, ease: Power3.easeOut})
+            .fromTo('#page4', slideTime, {x: 640}, {x: 0, ease: Power2.easeOut})
             .staggerFromTo('.page4-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page4-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
             .set('#bird', {display: 'block', autoAlpha: 1, top: '800px', left: '-175px'})
-            .to('#bird', 2, {
+            .to('#bird', 2.5, {
                 bezier:[
                     {left:300, top:480},
                     {left:640, top:420}
@@ -235,7 +232,7 @@ new mo.Loader(sourceArr,{
             var page4SlideUpOut = new TimelineMax({
                 onStart: page5SlideIn
             });
-            page4SlideUpOut.to('#page4', slideTime, {x: -640, ease: Power3.easeInOut})
+            page4SlideUpOut.to('#page4', slideTime, {x: -640, ease: Power2.easeInOut})
             .set('#page4', {display: 'none', autoAlpha: 0})
         }
 
@@ -253,17 +250,14 @@ new mo.Loader(sourceArr,{
             });
             page5SlideUpIn.set(['#page56', '#page5'], {display: 'block', autoAlpha: 1})
             .set('#page5-content', {perspective: 500})
-            .fromTo('#page56', slideTime, {x: 640}, {x: 0, ease: Power3.easeOut})
+            .fromTo('#page56', slideTime, {x: 640}, {x: 0, ease: Power2.easeOut})
             .staggerFromTo('.page5-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page5-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
-            .set('#bird', {display: 'block', autoAlpha: 1, top: '200px', left: '-175px'})
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '600px', left: '-175px'})
             .to('#bird', 2.5, {
                 bezier:[
-                    {left:100, top:160},
-                    {left:200, top:100},
-                    {left:280, top:40},
-                    {left:460, top:100},
-                    {left:640, top:140}
+                    {left:300, top:480},
+                    {left:640, top:420}
                 ],
                 ease:Power1.easeIn,
                 onStart: function () {
