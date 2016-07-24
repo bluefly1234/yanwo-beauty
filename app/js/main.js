@@ -289,6 +289,38 @@ new mo.Loader(sourceArr,{
             .fromTo('#rule-btn', 0.6, {autoAlpha:0, y: 100}, {autoAlpha: 1, y: 0}, '-=0.6')
         }
 
+        function showRule() {
+            var ruleShow = new TimelineMax();
+            ruleShow.set('#rule', {display: 'block'})
+            .fromTo('#rule', 0.4, {autoAlpha: 0}, {autoAlpha: 1})
+            .fromTo('#rule-container', 0.8, {autoAlpha: 0, y: -800}, {autoAlpha: 1, y: 0, ease: Back.easeOut.config(1.6)}, '-=0.1')
+        }
+
+        function closeRule() {
+            var ruleClose = new TimelineMax();
+            ruleClose.to('#rule-container', 0.6, {autoAlpha: 0, y: -800, ease: Back.easeIn.config(1.6)})
+            .to('#rule', 0.4, {autoAlpha: 0}, '-=0.2')
+            .set('#rule', {display: 'none'})
+        }
+
+        function showPassPage() {
+            var passPageShow = new TimelineMax();
+            passPageShow.set('#password-page', {display: 'block', perspective: 500})
+            .fromTo('#password-page', 0.4, {autoAlpha: 0}, {autoAlpha: 1})
+            .fromTo('#password-container', 0.6, {autoAlpha: 0, z: -500}, {autoAlpha: 1, z: 0, ease: Back.easeOut.config(1.2)}, '-=0.1')
+        }
+
+        function closePassPage() {
+            var passPageHide = new TimelineMax();
+            passPageHide.to('#password-container', 0.4, {autoAlpha: 0, z: -500, ease: Back.easeIn.config(1.2)})
+            .to('#password-page', 0.4, {autoAlpha: 0})
+            .set('#password-page', {display: 'none'})
+        }
+
+        $('#sign-btn').on('touchstart', showPassPage);
+        $('#rule-btn').on('touchstart', showRule);
+        $('#close-rule').on('touchstart', closeRule);
+
         // 小鸟振翅
         var birdFlap = new TimelineMax({
             paused: true,
