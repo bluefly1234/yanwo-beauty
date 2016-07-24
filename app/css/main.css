@@ -617,36 +617,36 @@ body {
 }
 
 .page2-sprite, .page2-content1, .page2-content2, .page2-content3, .page2-content4, .page2-line {
-  background-image: url('../images/page2-sda77c70712.png');
+  background-image: url('../images/page2-sf45919eb87.png');
   background-repeat: no-repeat;
 }
 
 .page2-content1 {
-  background-position: 0 0;
+  background-position: -143px 0;
   height: 310px;
   width: 45px;
 }
 
 .page2-content2 {
-  background-position: 0 -310px;
+  background-position: -58px 0;
   height: 178px;
   width: 42px;
 }
 
 .page2-content3 {
-  background-position: -109px -310px;
+  background-position: -100px 0;
   height: 222px;
   width: 43px;
 }
 
 .page2-content4 {
-  background-position: -42px -310px;
-  height: 203px;
-  width: 67px;
+  background-position: 0 0;
+  height: 116px;
+  width: 58px;
 }
 
 .page2-line {
-  background-position: 0 -532px;
+  background-position: 0 -310px;
   height: 335px;
   width: 190px;
 }
@@ -686,36 +686,41 @@ body {
   left: 80px;
 }
 
+#page2-content4 {
+  top: 0;
+  left: 6px;
+}
+
 #common-logo {
   top: 39px;
   left: 28px;
 }
 
 .page3-sprite, .page3-content1, .page3-content2, .page3-content3, .page3-content4, .page3-content5, .page3-line {
-  background-image: url('../images/page3-saf08ae2600.png');
+  background-image: url('../images/page3-se41da0fbe1.png');
   background-repeat: no-repeat;
 }
 
 .page3-content1 {
-  background-position: -58px 0;
+  background-position: -116px 0;
   height: 277px;
   width: 40px;
 }
 
 .page3-content2 {
-  background-position: -98px 0;
+  background-position: -156px 0;
   height: 278px;
   width: 40px;
 }
 
 .page3-content3 {
-  background-position: -177px 0;
-  height: 327px;
-  width: 69px;
+  background-position: -58px 0;
+  height: 236px;
+  width: 58px;
 }
 
 .page3-content4 {
-  background-position: -138px 0;
+  background-position: -196px 0;
   height: 279px;
   width: 39px;
 }
@@ -727,7 +732,7 @@ body {
 }
 
 .page3-line {
-  background-position: 0 -327px;
+  background-position: 0 -279px;
   height: 315px;
   width: 259px;
 }
@@ -778,7 +783,7 @@ body {
 }
 
 .page4-sprite, .page4-content1, .page4-content2, .page4-content3, .page4-content4, .page4-content5, .page4-line {
-  background-image: url('../images/page4-s4f8615222a.png');
+  background-image: url('../images/page4-s820e9b9f9c.png');
   background-repeat: no-repeat;
 }
 
@@ -808,8 +813,8 @@ body {
 
 .page4-content5 {
   background-position: -43px 0;
-  height: 289px;
-  width: 76px;
+  height: 232px;
+  width: 58px;
 }
 
 .page4-line {
@@ -859,47 +864,53 @@ body {
 }
 
 #page4-content5 {
-  top: 0;
-  left: 0;
+  top: 15px;
+  left: 12px;
 }
 
-.page5-sprite, .page5-content1, .page5-content2, .page5-content3, .page5-content4, .page5-content5, .page5-line {
-  background-image: url('../images/page5-s2a8f395e7f.png');
+.page5-sprite, .page5-content1, .page5-content2, .page5-content3, .page5-content4, .page5-content5, .page5-dot, .page5-line {
+  background-image: url('../images/page5-s82b4583693.png');
   background-repeat: no-repeat;
 }
 
 .page5-content1 {
-  background-position: -42px -331px;
+  background-position: -42px -136px;
   height: 205px;
   width: 57px;
 }
 
 .page5-content2 {
-  background-position: -43px 0;
-  height: 331px;
-  width: 70px;
+  background-position: -142px -136px;
+  height: 216px;
+  width: 43px;
 }
 
 .page5-content3 {
-  background-position: 0 -331px;
+  background-position: 0 -136px;
   height: 170px;
   width: 42px;
 }
 
 .page5-content4 {
-  background-position: -99px -331px;
+  background-position: -99px -136px;
   height: 213px;
   width: 43px;
 }
 
 .page5-content5 {
-  background-position: 0 0;
+  background-position: -185px -136px;
   height: 258px;
   width: 43px;
 }
 
+.page5-dot {
+  background-position: 0 0;
+  height: 136px;
+  width: 640px;
+}
+
 .page5-line {
-  background-position: 0 -544px;
+  background-position: -228px -136px;
   height: 344px;
   width: 174px;
 }
@@ -928,7 +939,7 @@ body {
 }
 
 #page5-content2 {
-  top: 0;
+  top: 116px;
   left: 168px;
 }
 
@@ -944,6 +955,11 @@ body {
 
 #page5-content5 {
   top: 116px;
+  left: 0;
+}
+
+#page5-dot {
+  top: 118px;
   left: 0;
 }
 

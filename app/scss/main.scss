@@ -351,6 +351,11 @@ $page2-sprite-dimensions: true;
     left: 80px;
 }
 
+#page2-content4 {
+    top: 0;
+    left: 6px;
+}
+
 #common-logo {
     top: 39px;
     left: 28px;
@@ -460,8 +465,8 @@ $page4-sprite-dimensions: true;
 }
 
 #page4-content5 {
-    top: 0;
-    left: 0;
+    top: 15px;
+    left: 12px;
 }
 
 // page5 sprite 设置
@@ -497,7 +502,7 @@ $page5-sprite-dimensions: true;
 }
 
 #page5-content2 {
-    top: 0;
+    top: 116px;
     left: 168px;
 }
 
@@ -513,6 +518,11 @@ $page5-sprite-dimensions: true;
 
 #page5-content5 {
     top: 116px;
+    left: 0;
+}
+
+#page5-dot {
+    top: 118px;
     left: 0;
 }
 
