@@ -1113,7 +1113,28 @@ body {
   left: 0;
 }
 
-#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird {
+#rule {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#rule-container {
+  top: 110px;
+  left: 50%;
+  width: 544px;
+  height: 767px;
+  margin-left: -272px;
+  background-image: url("../images/rule.png");
+}
+
+#close-rule {
+  top: 671px;
+  left: 188px;
+  width: 167px;
+  height: 50px;
+  background-image: url("../images/close-rule.png");
+}
+
+#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule {
   display: none;
 }
 

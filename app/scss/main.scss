@@ -610,7 +610,32 @@ $bird-sprite-dimensions: true;
     left: 0;
 }
 
-#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird {
+#rule {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#rule-container {
+    top: 110px;
+    left: 50%;
+    $rule: '../images/rule.png';
+    width: image-width($rule);
+    height: image-height($rule);
+    margin: {
+        left: -(image-width($rule)/2);
+    }
+    background-image: url($rule);
+}
+
+#close-rule {
+    top: 671px;
+    left: 188px;
+    $close-rule: '../images/close-rule.png';
+    width: image-width($close-rule);
+    height: image-height($close-rule);
+    background-image: url($close-rule);
+}
+
+#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule {
     display: none;
 }
 
