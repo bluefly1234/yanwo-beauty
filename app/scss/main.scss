@@ -610,7 +610,7 @@ $bird-sprite-dimensions: true;
     left: 0;
 }
 
-#rule {
+#rule, #password-page {
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -635,7 +635,41 @@ $bird-sprite-dimensions: true;
     background-image: url($close-rule);
 }
 
-#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule {
+#password-container {
+    top: 300px;
+    left: 50%;
+    $password: '../images/password.png';
+    width: image-width($password);
+    height: image-height($password);
+    margin: {
+        left: -(image-width($password)/2);
+    }
+    background-image: url($password);
+}
+
+#confirm {
+    top: 126px;
+    left: 118px;
+    $confirm: '../images/confirm.png';
+    width: image-width($confirm);
+    height: image-height($confirm);
+    background-image: url($confirm);
+}
+
+#password {
+    top: 64px;
+    left: 118px;
+    width: 360px;
+    height: 48px;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    text: {
+        align: center;
+    }
+    line-height: 48px;
+}
+
+#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page {
     display: none;
 }
 
