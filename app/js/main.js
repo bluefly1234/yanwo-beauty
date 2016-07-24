@@ -38,7 +38,7 @@ new mo.Loader(sourceArr,{
 	},
 	onComplete : function(time){
 		console.log('oncomplete:all source loaded:',arguments);
-        // $('#bg-music').attr('src', 'media/bgmusic.mp3');
+        $('#bg-music').attr('src', 'media/bgmusic.mp3');
         var hideLoading = new TimelineMax({
             delay: 1,
             onStart: function () {
@@ -46,8 +46,8 @@ new mo.Loader(sourceArr,{
                 TweenMax.set(['.cover-content', '#cover-line', '#cover-logo'], {autoAlpha: 0});
             },
             onComplete: function () {
-                // TweenMax.set('#music-control', {display: 'block', autoAlpha: 1});
-                // bgAud.play();
+                TweenMax.set('#music-control', {display: 'block', autoAlpha: 1});
+                bgAud.play();
                 showCover();
 
             }
@@ -63,6 +63,51 @@ new mo.Loader(sourceArr,{
         $('body').on('touchmove', function (e) {
             e.preventDefault();
         }); // 禁止页面滚动
+
+        // music-control--------------
+        var musicCtrl = new TimelineMax({repeat: -1, paused:true });
+        var musicRotation = new TimelineMax({repeat: -1, paused:true});
+        musicCtrl.to($(".music-control-icon"), 2, {rotation: 360, ease: Power0.easeNone});
+        musicRotation.to($(".music-control-icon:nth(1)"), 0.5, {x: "-=20",y: "-=20", autoAlpha:0, ease: Power0.easeNone})
+                      .to($(".music-control-icon:nth(2)"), 0.5, {x: "+=20", y: "-=20", autoAlpha:0, ease: Power0.easeNone})
+                      .to($(".music-control-icon:nth(3)"), 0.5, {x: "-=20", y: "+=20", autoAlpha:0, ease: Power0.easeNone})
+                      .to($(".music-control-icon:nth(4)"), 0.5, {x: "+=20", y: "+=20", autoAlpha:0, ease: Power0.easeNone})
+        // 音乐初始化
+        bgAud = $("#bg-music")[0];
+
+        console.log(bgAud);
+        function initAud(){
+          if (bgAud.currentTime){
+            console.log("背景音乐开始播放");
+            musicCtrl.play();
+            musicRotation.play();
+            bgAud.removeEventListener("timeupdate", initAud, false); //只执行一次，防止控制按钮动画无法暂停
+          }
+        }
+
+        bgAud.addEventListener("timeupdate", initAud, false);
+
+        function playBM() {
+          bgAud.play();
+          musicCtrl.play();
+          musicRotation.play();
+        }
+
+        function pauseBM() {
+          bgAud.pause();
+          musicCtrl.pause();
+          musicRotation.pause();
+        }
+
+        // 音乐控制
+        $("#music-control").on('touchstart', function(){
+          if(bgAud.paused){
+            playBM();
+          }else{
+            pauseBM();
+          }
+        })
+        // music-control End------------------------------
 
         // 滑动指示箭头动画
         var upGuide = new TimelineMax({yoyo: true, repeat: -1, paused: true});
@@ -319,6 +364,11 @@ new mo.Loader(sourceArr,{
         $('#sign-btn').on('touchstart', showPassPage);
         $('#rule-btn').on('touchstart', showRule);
         $('#close-rule').on('touchstart', closeRule);
+
+        // 报名跳转
+        $('#confirm').on('touchstart', function () {
+            location.href = '#';
+        });
 
         // 小鸟振翅
         var birdFlap = new TimelineMax({
