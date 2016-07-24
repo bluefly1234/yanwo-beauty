@@ -8,19 +8,24 @@ var slideTime = 0.6;
 
 // 预加载
 var sourceArr = [
-    'images/bird-sc38bbd845c.png',
+    'images/bird-s8cbbc68603.png',
+    'images/close-rule.png',
+    'images/confirm.png',
     'images/cover-bg.jpg',
     'images/cover-s0676e36cae.png',
     'images/logo.png',
-    'images/misc-sf5831d2011.png',
+    'images/misc-sa66909f32a.png',
     'images/page2-bg.jpg',
-    'images/page2-sda77c70712.png',
-    'images/page3-saf08ae2600.png',
+    'images/page2-sf45919eb87.png',
+    'images/page3-bg.jpg',
+    'images/page3-se41da0fbe1.png',
     'images/page4-bg.jpg',
-    'images/page4-s4f8615222a.png',
-    'images/page5-s2a8f395e7f.png',
+    'images/page4-s820e9b9f9c.png',
+    'images/page5-s82b4583693.png',
     'images/page6-scce0ac0b0d.png',
     'images/page56-bg.jpg',
+    'images/password.png',
+    'images/rule.png',
     'media/bgmusic.mp3'
 ]; //需要加载的资源列表
 
@@ -61,26 +66,26 @@ new mo.Loader(sourceArr,{
 
         // 滑动指示箭头动画
         var upGuide = new TimelineMax({yoyo: true, repeat: -1, paused: true});
-        upGuide.to($('#arrow-up'), 0.8, {y: '-=30', ease: Power0.easeNone})
+        upGuide.to($('#arrow-up'), 0.8, {x: '-=30', ease: Power0.easeNone})
 
         function showArrow() {
             TweenMax.fromTo($('#arrow-up'), 0.5, {autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeIn, onComplete: function () {
                 upGuide.play();
             }});
-        } // 显示上滑箭头并播放箭头动画
+        } // 显示左滑箭头并播放箭头动画
 
         function hideArrow() {
             TweenMax.to($('#arrow-up'), 0.5, {autoAlpha: 0, onComplete: function () {
                 upGuide.pause(0);
             }});
-        } // 隐藏上滑箭头并停止箭头动画
+        } // 隐藏左滑箭头并停止箭头动画
 
         showCover = function () {
             var coverShow = new TimelineMax({
                 onComplete: function () {
                     showArrow();
-                    // 上滑
-                    touch.on($("#cover"), 'swipeup', function(ev){
+                    // 左滑
+                    touch.on($("#cover"), 'swipeleft', function(ev){
                       console.log(ev.type + ' intro');
                       hideArrow();
                       coverSlideOut();
@@ -99,7 +104,7 @@ new mo.Loader(sourceArr,{
             var coverSlideUpOut = new TimelineMax({
                 onStart: page2SlideIn
             });
-            coverSlideUpOut.to('#cover', slideTime, {y: -1043})
+            coverSlideUpOut.to('#cover', slideTime, {x: -640, ease: Power3.easeInOut})
             .set('#cover', {display: 'none', autoAlpha: 0})
         }
 
@@ -107,8 +112,8 @@ new mo.Loader(sourceArr,{
             var page2SlideUpIn = new TimelineMax({
                 onComplete: function () {
                     showArrow();
-                    // 上滑
-                    touch.on($("#page2"), 'swipeup', function(ev){
+                    // 左滑
+                    touch.on($("#page2"), 'swipeleft', function(ev){
                       console.log(ev.type + ' page2');
                       hideArrow();
                       page2SlideOut();
@@ -117,9 +122,9 @@ new mo.Loader(sourceArr,{
             });
             page2SlideUpIn.set('#page2', {display: 'block', autoAlpha: 1})
             .set('#page2-content', {perspective: 500})
-            .fromTo('#page2', slideTime, {y: 1043}, {y: 0, onComplete: function () {
+            .fromTo('#page2', slideTime, {x: 640}, {x: 0, onComplete: function () {
                 TweenMax.fromTo('#common-logo', 0.6, {autoAlpha: 0}, {autoAlpha: 1});
-            }})
+            }, ease: Power3.easeOut})
             .staggerFromTo('.page2-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page2-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
             .set('#bird', {display: 'block', autoAlpha: 1, top: '800px', left: '-175px'})
@@ -146,7 +151,7 @@ new mo.Loader(sourceArr,{
             var page2SlideUpOut = new TimelineMax({
                 onStart: page3SlideIn
             });
-            page2SlideUpOut.to('#page2', slideTime, {y: -1043})
+            page2SlideUpOut.to('#page2', slideTime, {x: -640, ease: Power3.easeInOut})
             .set('#page2', {display: 'none', autoAlpha: 0})
         }
 
@@ -154,8 +159,8 @@ new mo.Loader(sourceArr,{
             var page3SlideUpIn = new TimelineMax({
                 onComplete: function () {
                     showArrow();
-                    // 上滑
-                    touch.on($("#page3"), 'swipeup', function(ev){
+                    // 左滑
+                    touch.on($("#page3"), 'swipeleft', function(ev){
                       console.log(ev.type + ' page3');
                       hideArrow();
                       page3SlideOut();
@@ -164,7 +169,7 @@ new mo.Loader(sourceArr,{
             });
             page3SlideUpIn.set('#page3', {display: 'block', autoAlpha: 1})
             .set('#page3-content', {perspective: 500})
-            .fromTo('#page3', slideTime, {y: 1043}, {y: 0})
+            .fromTo('#page3', slideTime, {x: 640}, {x: 0, ease: Power3.easeOut})
             .staggerFromTo('.page3-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page3-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
             .set('#bird', {display: 'block', autoAlpha: 1, top: '-185px', left: '0px'})
@@ -188,7 +193,7 @@ new mo.Loader(sourceArr,{
             var page3SlideUpOut = new TimelineMax({
                 onStart: page4SlideIn
             });
-            page3SlideUpOut.to('#page3', slideTime, {y: -1043})
+            page3SlideUpOut.to('#page3', slideTime, {x: -640, ease: Power3.easeInOut})
             .set('#page3', {display: 'none', autoAlpha: 0})
         }
 
@@ -196,8 +201,8 @@ new mo.Loader(sourceArr,{
             var page4SlideUpIn = new TimelineMax({
                 onComplete: function () {
                     showArrow();
-                    // 上滑
-                    touch.on($("#page4"), 'swipeup', function(ev){
+                    // 左滑
+                    touch.on($("#page4"), 'swipeleft', function(ev){
                       console.log(ev.type + ' page4');
                       hideArrow();
                       page4SlideOut();
@@ -206,7 +211,7 @@ new mo.Loader(sourceArr,{
             });
             page4SlideUpIn.set('#page4', {display: 'block', autoAlpha: 1})
             .set('#page4-content', {perspective: 500})
-            .fromTo('#page4', slideTime, {y: 1043}, {y: 0})
+            .fromTo('#page4', slideTime, {x: 640}, {x: 0, ease: Power3.easeOut})
             .staggerFromTo('.page4-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page4-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
             .set('#bird', {display: 'block', autoAlpha: 1, top: '800px', left: '-175px'})
@@ -230,7 +235,7 @@ new mo.Loader(sourceArr,{
             var page4SlideUpOut = new TimelineMax({
                 onStart: page5SlideIn
             });
-            page4SlideUpOut.to('#page4', slideTime, {y: -1043})
+            page4SlideUpOut.to('#page4', slideTime, {x: -640, ease: Power3.easeInOut})
             .set('#page4', {display: 'none', autoAlpha: 0})
         }
 
@@ -238,8 +243,8 @@ new mo.Loader(sourceArr,{
             var page5SlideUpIn = new TimelineMax({
                 onComplete: function () {
                     showArrow();
-                    // 上滑
-                    touch.on($("#page5"), 'swipeup', function(ev){
+                    // 左滑
+                    touch.on($("#page5"), 'swipeleft', function(ev){
                       console.log(ev.type + ' page5');
                       hideArrow();
                       hidePage5();
@@ -248,7 +253,7 @@ new mo.Loader(sourceArr,{
             });
             page5SlideUpIn.set(['#page56', '#page5'], {display: 'block', autoAlpha: 1})
             .set('#page5-content', {perspective: 500})
-            .fromTo('#page56', slideTime, {y: 1043}, {y: 0})
+            .fromTo('#page56', slideTime, {x: 640}, {x: 0, ease: Power3.easeOut})
             .staggerFromTo('.page5-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page5-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
             .set('#bird', {display: 'block', autoAlpha: 1, top: '200px', left: '-175px'})

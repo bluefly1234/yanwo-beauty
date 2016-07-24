@@ -367,36 +367,36 @@ body {
 
 /*=================misc start=======================*/
 .misc-sprite, .misc-music-bg, #music-control-main, .misc-music-icon, .music-control-icon, .misc-up {
-  background-image: url('../images/misc-sf5831d2011.png');
+  background-image: url('../images/misc-sa66909f32a.png');
   background-repeat: no-repeat;
 }
 
 .misc-music-bg, #music-control-main {
-  background-position: 0 -60px;
+  background-position: 0 -50px;
   height: 58px;
   width: 58px;
 }
 
 .misc-music-icon, .music-control-icon {
-  background-position: 0 -29px;
+  background-position: 0 0;
   height: 31px;
   width: 19px;
 }
 
 .misc-up {
-  background-position: 0 0;
-  height: 29px;
-  width: 50px;
+  background-position: -19px 0;
+  height: 50px;
+  width: 29px;
 }
 
 #arrow-up {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  -moz-transform: translate3d(-50%, 0, 0);
-  -ms-transform: translate3d(-50%, 0, 0);
-  -webkit-transform: translate3d(-50%, 0, 0);
-  transform: translate3d(-50%, 0, 0);
+  right: 0;
+  top: 50%;
+  -moz-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
 }
 
 #music-control {
@@ -1064,38 +1064,38 @@ body {
 }
 
 .bird-sprite, .bird-1, .bird-2, .bird-3, .bird-4, .bird-5 {
-  background-image: url('../images/bird-sc38bbd845c.png');
+  background-image: url('../images/bird-s8cbbc68603.png');
   background-repeat: no-repeat;
 }
 
 .bird-1 {
-  background-position: 0 -222px;
-  height: 134px;
-  width: 174px;
+  background-position: 0 -111px;
+  height: 67px;
+  width: 87px;
 }
 
 .bird-2 {
   background-position: 0 0;
-  height: 108px;
-  width: 174px;
+  height: 54px;
+  width: 87px;
 }
 
 .bird-3 {
-  background-position: 0 -356px;
-  height: 151px;
-  width: 173px;
+  background-position: 0 -178px;
+  height: 76px;
+  width: 87px;
 }
 
 .bird-4 {
-  background-position: 0 -507px;
-  height: 173px;
-  width: 174px;
+  background-position: 0 -254px;
+  height: 87px;
+  width: 87px;
 }
 
 .bird-5 {
-  background-position: 0 -108px;
-  height: 114px;
-  width: 174px;
+  background-position: 0 -54px;
+  height: 57px;
+  width: 87px;
 }
 
 #bird {

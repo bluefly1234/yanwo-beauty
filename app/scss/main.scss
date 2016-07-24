@@ -149,9 +149,9 @@ $misc-sprite-dimensions: true;
 
 #arrow-up {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    @include transform(translate3d(-50%, 0, 0));
+    right: 0;
+    top: 50%;
+    @include transform(translate3d(0, -50%, 0));
 }
 
 // music=======================================================================
