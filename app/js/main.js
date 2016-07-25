@@ -8,6 +8,7 @@ var slideTime = 0.6;
 
 // 预加载
 var sourceArr = [
+    'images/back.png',
     'images/bird-s8cbbc68603.png',
     'images/close-rule.png',
     'images/confirm.png',
@@ -364,6 +365,7 @@ new mo.Loader(sourceArr,{
         $('#sign-btn').on('touchstart', showPassPage);
         $('#rule-btn').on('touchstart', showRule);
         $('#close-rule').on('touchstart', closeRule);
+        $('#back').on('touchstart', closePassPage);
 
         // 报名跳转
         $('#confirm').on('touchstart', function () {

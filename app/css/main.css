@@ -1154,13 +1154,13 @@ body {
   top: 300px;
   left: 50%;
   width: 544px;
-  height: 279px;
+  height: 326px;
   margin-left: -272px;
   background-image: url("../images/password.png");
 }
 
 #confirm {
-  top: 126px;
+  top: 115px;
   left: 118px;
   width: 359px;
   height: 50px;
@@ -1176,6 +1176,14 @@ body {
   background: transparent;
   text-align: center;
   line-height: 48px;
+}
+
+#back {
+  top: 257px;
+  left: 202px;
+  width: 139px;
+  height: 50px;
+  background-image: url("../images/back.png");
 }
 
 #cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page {

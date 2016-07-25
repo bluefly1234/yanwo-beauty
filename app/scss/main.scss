@@ -658,7 +658,7 @@ $bird-sprite-dimensions: true;
 }
 
 #confirm {
-    top: 126px;
+    top: 115px;
     left: 118px;
     $confirm: '../images/confirm.png';
     width: image-width($confirm);
@@ -677,6 +677,15 @@ $bird-sprite-dimensions: true;
         align: center;
     }
     line-height: 48px;
+}
+
+#back {
+    top: 257px;
+    left: 202px;
+    $back: '../images/back.png';
+    width: image-width($back);
+    height: image-height($back);
+    background-image: url($back);
 }
 
 #cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page {
