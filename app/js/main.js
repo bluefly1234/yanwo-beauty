@@ -367,7 +367,18 @@ new mo.Loader(sourceArr,{
 
         // 报名跳转
         $('#confirm').on('touchstart', function () {
-            location.href = '#';
+            var passVal = $('#password').val();
+            console.log(passVal);
+            if (passVal=='') {
+                alert('请填写口令');
+                return;
+            }else if (passVal=='12345') {
+                location.href = '../yzw';
+            }else {
+                alert('口令错误，请填写正确口令');
+                return;
+            }
+
         });
 
         // 小鸟振翅
