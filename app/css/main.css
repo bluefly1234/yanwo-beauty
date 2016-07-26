@@ -1136,9 +1136,9 @@ body {
 #rule-container {
   top: 110px;
   left: 50%;
-  width: 544px;
+  width: 543px;
   height: 767px;
-  margin-left: -272px;
+  margin-left: -271.5px;
   background-image: url("../images/rule.png");
 }
 
