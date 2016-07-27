@@ -688,6 +688,41 @@ $bird-sprite-dimensions: true;
     background-image: url($back);
 }
 
+.go-sign {
+    $go-sign: '../images/go-sign.png';
+    width: image-width($go-sign);
+    height: image-height($go-sign);
+    background-image: url($go-sign);
+}
+
+.go-sign2 {
+    $go-sign2: '../images/go-sign2.png';
+    width: image-width($go-sign2);
+    height: image-height($go-sign2);
+    background-image: url($go-sign2);
+}
+
+#page2-go-sign {
+    top: 0;
+    left: -56px;
+}
+
+#page3-go-sign {
+    top: 0;
+    left: -56px;
+}
+
+#page4-go-sign {
+    top: 16px;
+    left: -56px;
+}
+
+#page5-go-sign {
+    top: 116px;
+    left: -56px;
+}
+
+
 #cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page {
     display: none;
 }

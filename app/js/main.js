@@ -5,6 +5,15 @@
 var bgAud;
 var showCover;
 var slideTime = 0.6;
+var overlapPage2 = false;
+var overlapPage3 = false;
+var overlapPage4 = false;
+var overlapPage5 = false;
+
+var page2SlideUpIn;
+var page3SlideUpIn;
+var page4SlideUpIn;
+var page5SlideUpIn;
 
 // 预加载
 var sourceArr = [
@@ -14,6 +23,8 @@ var sourceArr = [
     'images/confirm.png',
     'images/cover-bg.jpg',
     'images/cover-s0676e36cae.png',
+    'images/go-sign.png',
+    'images/go-sign2.png',
     'images/logo.png',
     'images/misc-sa66909f32a.png',
     'images/page2-bg.jpg',
@@ -155,7 +166,7 @@ new mo.Loader(sourceArr,{
         }
 
         function page2SlideIn() {
-            var page2SlideUpIn = new TimelineMax({
+            page2SlideUpIn = new TimelineMax({
                 onComplete: function () {
                     showArrow();
                     // 左滑
@@ -187,19 +198,34 @@ new mo.Loader(sourceArr,{
                     TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
-            });
+            })
+            .add('page2End')
         }
+
+        $('#page2-go-sign').on('touchstart', function () {
+            overlapPage2 = true;
+            page2SlideOut();
+        });
 
         function page2SlideOut() {
             var page2SlideUpOut = new TimelineMax({
-                onStart: page3SlideIn
+                onStart: function () {
+                    if (overlapPage2) {
+                        page2SlideUpIn.pause('page2End');
+                        birdFlap.pause(0);
+                        hideArrow();
+                        goStraightPage6();
+                    }else {
+                        page3SlideIn();
+                    }
+                }
             });
             page2SlideUpOut.to('#page2', slideTime, {x: -640, ease: Power2.easeInOut})
             .set('#page2', {display: 'none', autoAlpha: 0})
         }
 
         function page3SlideIn() {
-            var page3SlideUpIn = new TimelineMax({
+            page3SlideUpIn = new TimelineMax({
                 onComplete: function () {
                     showArrow();
                     // 左滑
@@ -229,19 +255,34 @@ new mo.Loader(sourceArr,{
                     TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
-            });
+            })
+            .add('page3End')
         }
+
+        $('#page3-go-sign').on('touchstart', function () {
+            overlapPage3 = true;
+            page3SlideOut();
+        });
 
         function page3SlideOut() {
             var page3SlideUpOut = new TimelineMax({
-                onStart: page4SlideIn
+                onStart: function () {
+                    if (overlapPage3) {
+                        page3SlideUpIn.pause('page3End');
+                        birdFlap.pause(0);
+                        hideArrow();
+                        goStraightPage6();
+                    }else {
+                        page4SlideIn();
+                    }
+                }
             });
             page3SlideUpOut.to('#page3', slideTime, {x: -640, ease: Power2.easeInOut})
             .set('#page3', {display: 'none', autoAlpha: 0})
         }
 
         function page4SlideIn() {
-            var page4SlideUpIn = new TimelineMax({
+            page4SlideUpIn = new TimelineMax({
                 onComplete: function () {
                     showArrow();
                     // 左滑
@@ -271,19 +312,34 @@ new mo.Loader(sourceArr,{
                     TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
-            });
+            })
+            .add('page4End')
         }
+
+        $('#page4-go-sign').on('touchstart', function () {
+            overlapPage4 = true;
+            page4SlideOut();
+        });
 
         function page4SlideOut() {
             var page4SlideUpOut = new TimelineMax({
-                onStart: page5SlideIn
+                onStart: function () {
+                    if (overlapPage4) {
+                        page4SlideUpIn.pause('page4End');
+                        birdFlap.pause(0);
+                        hideArrow();
+                        goStraightPage6();
+                    }else {
+                        page5SlideIn();
+                    }
+                }
             });
             page4SlideUpOut.to('#page4', slideTime, {x: -640, ease: Power2.easeInOut})
             .set('#page4', {display: 'none', autoAlpha: 0})
         }
 
         function page5SlideIn() {
-            var page5SlideUpIn = new TimelineMax({
+            page5SlideUpIn = new TimelineMax({
                 onComplete: function () {
                     showArrow();
                     // 左滑
@@ -313,8 +369,17 @@ new mo.Loader(sourceArr,{
                     TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
-            });
+            })
+            .add('page5End')
         }
+
+        $('#page5-go-sign').on('touchstart', function () {
+            overlapPage5 = true;
+            page5SlideUpIn.pause('page5End');
+            birdFlap.pause(0);
+            hideArrow();
+            hidePage5();
+        });
 
         function hidePage5() {
             var page5Hide = new TimelineMax({
@@ -328,6 +393,18 @@ new mo.Loader(sourceArr,{
             var page6Show = new TimelineMax();
             page6Show.set('#page6', {display: 'block', autoAlpha: 1})
             .set('#page6-content', {perspective: 500})
+            .staggerFromTo('.page6-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
+            .fromTo('#page6-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
+            .fromTo('#sign-btn', 0.6, {autoAlpha:0, y: -100}, {autoAlpha: 1, y: 0})
+            .fromTo('#rule-btn', 0.6, {autoAlpha:0, y: 100}, {autoAlpha: 1, y: 0}, '-=0.6')
+        }
+
+        function goStraightPage6() {
+            var goPage6 = new TimelineMax();
+            goPage6.set(['#page56', '#page6'], {display: 'block', autoAlpha: 1})
+            .set('#page6', {display: 'block', autoAlpha: 1})
+            .set('#page6-content', {perspective: 500})
+            .fromTo('#page56', slideTime, {x: 640}, {x: 0, ease: Power2.easeOut})
             .staggerFromTo('.page6-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page6-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
             .fromTo('#sign-btn', 0.6, {autoAlpha:0, y: -100}, {autoAlpha: 1, y: 0})
@@ -374,13 +451,16 @@ new mo.Loader(sourceArr,{
             if (passVal=='') {
                 alert('请填写口令');
                 return;
-            }else if (passVal=='12345') {
+            }
+
+			var passValInt = parseInt(passVal);
+			//var a=
+			if (passVal=='123456') {
                 location.href = '../yzw';
             }else {
                 alert('口令错误，请填写正确口令');
                 return;
             }
-
         });
 
         // 小鸟振翅

@@ -1186,6 +1186,38 @@ body {
   background-image: url("../images/back.png");
 }
 
+.go-sign {
+  width: 43px;
+  height: 115px;
+  background-image: url("../images/go-sign.png");
+}
+
+.go-sign2 {
+  width: 43px;
+  height: 115px;
+  background-image: url("../images/go-sign2.png");
+}
+
+#page2-go-sign {
+  top: 0;
+  left: -56px;
+}
+
+#page3-go-sign {
+  top: 0;
+  left: -56px;
+}
+
+#page4-go-sign {
+  top: 16px;
+  left: -56px;
+}
+
+#page5-go-sign {
+  top: 116px;
+  left: -56px;
+}
+
 #cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page {
   display: none;
 }
