@@ -401,7 +401,11 @@ new mo.Loader(sourceArr,{
         }
 
         function goStraightPage6() {
-            var goPage6 = new TimelineMax();
+            var goPage6 = new TimelineMax({
+                onStart: function () {
+                    TweenMax.set('#bird', {display: 'none'});
+                }
+            });
             goPage6.set(['#page56', '#page6'], {display: 'block', autoAlpha: 1})
             .set('#page6', {display: 'block', autoAlpha: 1})
             .set('#page6-content', {perspective: 500})
