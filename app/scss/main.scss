@@ -625,7 +625,7 @@ $bird-sprite-dimensions: true;
 }
 
 #rule-container {
-    top: 110px;
+    top: 42px;
     left: 50%;
     $rule: '../images/rule.png';
     width: image-width($rule);
@@ -637,7 +637,7 @@ $bird-sprite-dimensions: true;
 }
 
 #close-rule {
-    top: 671px;
+    top: 857px;
     left: 188px;
     $close-rule: '../images/close-rule.png';
     width: image-width($close-rule);
@@ -646,7 +646,7 @@ $bird-sprite-dimensions: true;
 }
 
 #password-container {
-    top: 300px;
+    top: 230px;
     left: 50%;
     $password: '../images/password.png';
     width: image-width($password);
@@ -686,6 +686,24 @@ $bird-sprite-dimensions: true;
     width: image-width($back);
     height: image-height($back);
     background-image: url($back);
+}
+
+#close-password {
+    top: 320px;
+    left: 258px;
+    $close-password: '../images/close-password.png';
+    width: image-width($close-password);
+    height: image-height($close-password);
+    background-image: url($close-password);
+}
+
+#get-password {
+    top: 244px;
+    left: 118px;
+    $get-password: '../images/get-password.png';
+    width: image-width($get-password);
+    height: image-height($get-password);
+    background-image: url($get-password);
 }
 
 .go-sign {

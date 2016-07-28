@@ -17,12 +17,13 @@ var page5SlideUpIn;
 
 // 预加载
 var sourceArr = [
-    'images/back.png',
     'images/bird-s8cbbc68603.png',
     'images/close-rule.png',
+    'images/close-password.png',
     'images/confirm.png',
     'images/cover-bg.jpg',
     'images/cover-s0676e36cae.png',
+    'images/get-password.png',
     'images/go-sign.png',
     'images/go-sign2.png',
     'images/logo.png',
@@ -442,7 +443,10 @@ new mo.Loader(sourceArr,{
         $('#sign-btn').on('touchstart', showPassPage);
         $('#rule-btn').on('touchstart', showRule);
         $('#close-rule').on('touchstart', closeRule);
-        $('#back').on('touchstart', closePassPage);
+        $('#close-password').on('touchstart', closePassPage);
+        $('#get-password').on('touchstart', function () {
+            location.href = 'http://wsh.gaopeng.com/yanzhiwu1';
+        });
 
         // 报名跳转
         $('#confirm').on('touchstart', function () {

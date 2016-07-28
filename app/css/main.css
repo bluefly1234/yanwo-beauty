@@ -1134,16 +1134,16 @@ body {
 }
 
 #rule-container {
-  top: 110px;
+  top: 42px;
   left: 50%;
-  width: 543px;
-  height: 767px;
-  margin-left: -271.5px;
+  width: 544px;
+  height: 926px;
+  margin-left: -272px;
   background-image: url("../images/rule.png");
 }
 
 #close-rule {
-  top: 671px;
+  top: 857px;
   left: 188px;
   width: 167px;
   height: 50px;
@@ -1151,10 +1151,10 @@ body {
 }
 
 #password-container {
-  top: 300px;
+  top: 230px;
   left: 50%;
   width: 544px;
-  height: 326px;
+  height: 386px;
   margin-left: -272px;
   background-image: url("../images/password.png");
 }
@@ -1184,6 +1184,22 @@ body {
   width: 139px;
   height: 50px;
   background-image: url("../images/back.png");
+}
+
+#close-password {
+  top: 320px;
+  left: 258px;
+  width: 38px;
+  height: 38px;
+  background-image: url("../images/close-password.png");
+}
+
+#get-password {
+  top: 244px;
+  left: 118px;
+  width: 359px;
+  height: 50px;
+  background-image: url("../images/get-password.png");
 }
 
 .go-sign {
