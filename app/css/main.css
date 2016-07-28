@@ -1063,6 +1063,35 @@ body {
   left: 71px;
 }
 
+#qr-container {
+  top: 240px;
+  left: 69px;
+  width: 500px;
+  height: 534px;
+  background-image: url("../images/qrbg.png");
+}
+
+#qrcode {
+  top: 39px;
+  left: 121px;
+}
+
+#fake-qrcode {
+  top: -100px;
+  width: 100%;
+  height: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+#close-qr {
+  top: 458px;
+  left: 167px;
+  width: 167px;
+  height: 50px;
+  background-image: url("../images/close-rule.png");
+}
+
 .bird-sprite, .bird-1, .bird-2, .bird-3, .bird-4, .bird-5 {
   background-image: url('../images/bird-s8cbbc68603.png');
   background-repeat: no-repeat;
@@ -1129,7 +1158,7 @@ body {
   left: 0;
 }
 
-#rule, #password-page {
+#rule, #password-page, #qr-page {
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -1234,7 +1263,7 @@ body {
   left: -56px;
 }
 
-#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page {
+#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page, #qr-page {
   display: none;
 }
 

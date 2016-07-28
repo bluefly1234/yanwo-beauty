@@ -581,6 +581,36 @@ $page6-sprite-dimensions: true;
     left: 71px;
 }
 
+#qr-container {
+    top: 240px;
+    left: 69px;
+    $qrbg: '../images/qrbg.png';
+    width: image-width($qrbg);
+    height: image-height($qrbg);
+    background-image: url($qrbg);
+}
+
+#qrcode {
+    top: 39px;
+    left: 121px;
+}
+
+#fake-qrcode {
+    top: -100px;
+    width: 100%;
+    height: 100%;
+    @include opacity(0);
+}
+
+#close-qr {
+    top: 458px;
+    left: 167px;
+    $close-qr: '../images/close-rule.png';
+    width: image-width($close-qr);
+    height: image-height($close-qr);
+    background-image: url($close-qr);
+}
+
 // bird sprite 设置
 $bird-layout:smart;
 $bird-spacing:10px;
@@ -620,7 +650,7 @@ $bird-sprite-dimensions: true;
     left: 0;
 }
 
-#rule, #password-page {
+#rule, #password-page, #qr-page {
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -741,7 +771,7 @@ $bird-sprite-dimensions: true;
 }
 
 
-#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page {
+#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page, #qr-page {
     display: none;
 }
 

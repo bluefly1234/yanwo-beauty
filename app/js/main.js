@@ -38,6 +38,8 @@ var sourceArr = [
     'images/page6-scce0ac0b0d.png',
     'images/page56-bg.jpg',
     'images/password.png',
+    'images/qrbg.png',
+    'images/qrcode.png',
     'images/rule.png',
     'media/bgmusic.mp3'
 ]; //需要加载的资源列表
@@ -56,7 +58,7 @@ new mo.Loader(sourceArr,{
             delay: 1,
             onStart: function () {
                 TweenMax.set('#cover', {display: 'block', autoAlpha: 1});
-                TweenMax.set(['.cover-content', '#cover-line', '#cover-logo'], {autoAlpha: 0});
+                TweenMax.set(['.cover-content', '#cover-line'], {autoAlpha: 0});
             },
             onComplete: function () {
                 TweenMax.set('#music-control', {display: 'block', autoAlpha: 1});
@@ -155,7 +157,7 @@ new mo.Loader(sourceArr,{
             .set('#cover-content', {perspective: 500})
             .staggerFromTo('.cover-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#cover-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
-            .fromTo('#cover-logo', 0.6, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0})
+            // .fromTo('#cover-logo', 0.6, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0})
         }
 
         function coverSlideOut() {
@@ -180,13 +182,14 @@ new mo.Loader(sourceArr,{
             });
             page2SlideUpIn.set('#page2', {display: 'block', autoAlpha: 1})
             .set('#page2-content', {perspective: 500})
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '300px', left: '-175px'})
+            .add('page2Start')
             .fromTo('#page2', slideTime, {x: 640}, {x: 0, onComplete: function () {
                 TweenMax.fromTo('#common-logo', 0.6, {autoAlpha: 0}, {autoAlpha: 1});
             }, ease: Power2.easeOut})
             .staggerFromTo('.page2-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page2-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
-            .set('#bird', {display: 'block', autoAlpha: 1, top: '300px', left: '-175px'})
-            .to('#bird', 2.5, {
+            .to('#bird', 2, {
                 bezier:[
                     {left:300, top:440},
                     {left:640, top:480}
@@ -199,7 +202,7 @@ new mo.Loader(sourceArr,{
                     TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
-            })
+            }, 'page2Start')
             .add('page2End')
         }
 
@@ -239,10 +242,11 @@ new mo.Loader(sourceArr,{
             });
             page3SlideUpIn.set('#page3', {display: 'block', autoAlpha: 1})
             .set('#page3-content', {perspective: 500})
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '150px', left: '-175px'})
+            .add('page3Start')
             .fromTo('#page3', slideTime, {x: 640}, {x: 0, ease: Power2.easeOut})
             .staggerFromTo('.page3-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page3-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
-            .set('#bird', {display: 'block', autoAlpha: 1, top: '150px', left: '-175px'})
             .to('#bird', 2, {
                 bezier:[
                     {left:200, top:440},
@@ -256,7 +260,7 @@ new mo.Loader(sourceArr,{
                     TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
-            })
+            }, 'page3Start')
             .add('page3End')
         }
 
@@ -296,11 +300,12 @@ new mo.Loader(sourceArr,{
             });
             page4SlideUpIn.set('#page4', {display: 'block', autoAlpha: 1})
             .set('#page4-content', {perspective: 500})
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '800px', left: '-175px'})
+            .add('page4Start')
             .fromTo('#page4', slideTime, {x: 640}, {x: 0, ease: Power2.easeOut})
             .staggerFromTo('.page4-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page4-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
-            .set('#bird', {display: 'block', autoAlpha: 1, top: '800px', left: '-175px'})
-            .to('#bird', 2.5, {
+            .to('#bird', 2, {
                 bezier:[
                     {left:300, top:480},
                     {left:640, top:420}
@@ -313,7 +318,7 @@ new mo.Loader(sourceArr,{
                     TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
-            })
+            }, 'page4Start')
             .add('page4End')
         }
 
@@ -353,11 +358,12 @@ new mo.Loader(sourceArr,{
             });
             page5SlideUpIn.set(['#page56', '#page5'], {display: 'block', autoAlpha: 1})
             .set('#page5-content', {perspective: 500})
+            .set('#bird', {display: 'block', autoAlpha: 1, top: '600px', left: '-175px'})
+            .add('page5Start')
             .fromTo('#page56', slideTime, {x: 640}, {x: 0, ease: Power2.easeOut})
             .staggerFromTo('.page5-content', 0.8, {z: -50, autoAlpha: 0}, {z: 0, autoAlpha: 1}, 0.12)
             .fromTo('#page5-line', 0.8, {autoAlpha:0}, {autoAlpha: 1}, '-=0.8')
-            .set('#bird', {display: 'block', autoAlpha: 1, top: '600px', left: '-175px'})
-            .to('#bird', 2.5, {
+            .to('#bird', 2, {
                 bezier:[
                     {left:300, top:480},
                     {left:640, top:420}
@@ -370,7 +376,7 @@ new mo.Loader(sourceArr,{
                     TweenMax.set('#bird', {display: 'none', autoAlpha: 0});
                     birdFlap.pause(0);
                 }
-            })
+            }, 'page5Start')
             .add('page5End')
         }
 
@@ -444,6 +450,21 @@ new mo.Loader(sourceArr,{
             .set('#password-page', {display: 'none'})
         }
 
+        // 显示强制关注提示页面
+        function showAttention() {
+            var qrPageShow = new TimelineMax();
+            qrPageShow.set('#qr-page', {display: 'block', perspective: 500})
+            .fromTo('#qr-page', 0.4, {autoAlpha: 0}, {autoAlpha: 1})
+            .fromTo('#qr-container', 0.6, {autoAlpha: 0, z: -500}, {autoAlpha: 1, z: 0, ease: Back.easeOut.config(1.2)}, '-=0.1')
+        }
+
+        function closeAttention() {
+            var qrPageHide = new TimelineMax();
+            qrPageHide.to('#qr-container', 0.4, {autoAlpha: 0, z: -500, ease: Back.easeIn.config(1.2)})
+            .to('#qr-page', 0.4, {autoAlpha: 0})
+            .set('#qr-page', {display: 'none'})
+        }
+
         $('#sign-btn').on('touchstart', showPassPage);
         $('#rule-btn').on('touchstart', showRule);
         $('#close-rule').on('touchstart', closeRule);
@@ -451,6 +472,7 @@ new mo.Loader(sourceArr,{
         $('#get-password').on('touchstart', function () {
             location.href = 'http://wsh.gaopeng.com/yanzhiwu1';
         });
+        $('#close-qr').on('touchstart', closeAttention);
 
         // 报名跳转
         $('#confirm').on('touchstart', function () {
