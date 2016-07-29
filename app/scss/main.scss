@@ -134,6 +134,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
 }
@@ -650,7 +651,7 @@ $bird-sprite-dimensions: true;
     left: 0;
 }
 
-#rule, #password-page, #qr-page {
+#rule, #password-page, #qr-page, #acti-page {
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -770,8 +771,33 @@ $bird-sprite-dimensions: true;
     left: -56px;
 }
 
+#acti-des {
+    $acti-des: '../images/acti-des.jpg';
+    width: image-width($acti-des);
+    height: image-height($acti-des);
+    background-image: url($acti-des);
+}
 
-#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page, #qr-page {
+#go-buy {
+    bottom: 120px;
+    left: 122px;
+    $buy: '../images/buy.png';
+    width: image-width($buy);
+    height: image-height($buy);
+    background-image: url($buy);
+}
+
+#back-sign {
+    bottom: 120px;
+    left: 371px;
+    $back-sign: '../images/back-sign.png';
+    width: image-width($back-sign);
+    height: image-height($back-sign);
+    background-image: url($back-sign);
+}
+
+
+#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page, #qr-page, #acti-page {
     display: none;
 }
 

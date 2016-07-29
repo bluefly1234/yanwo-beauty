@@ -17,7 +17,10 @@ var page5SlideUpIn;
 
 // 预加载
 var sourceArr = [
+    'images/acti-des.png',
+    'images/back-sign.png',
     'images/bird-s8cbbc68603.png',
+    'images/buy.png',
     'images/close-rule.png',
     'images/close-password.png',
     'images/confirm.png',
@@ -459,19 +462,43 @@ new mo.Loader(sourceArr,{
         }
 
         function closeAttention() {
-            var qrPageHide = new TimelineMax();
+            var qrPageHide = new TimelineMax({
+                onStart: function () {
+                    $('body').off('touchmove'); // 禁止页面滚动
+                }
+            });
             qrPageHide.to('#qr-container', 0.4, {autoAlpha: 0, z: -500, ease: Back.easeIn.config(1.2)})
             .to('#qr-page', 0.4, {autoAlpha: 0})
             .set('#qr-page', {display: 'none'})
+        }
+
+        function showActiPage() {
+            var actiPageShow = new TimelineMax();
+            actiPageShow.set('#acti-page', {display: 'block'})
+            .fromTo('#acti-page', 0.4, {autoAlpha: 0}, {autoAlpha: 1})
+        }
+
+        function closeActiPage() {
+            var actiPageHide = new TimelineMax({
+                onComplete: function () {
+                    $('body').on('touchmove', function (e) {
+                        e.preventDefault();
+                    }); // 禁止页面滚动
+                }
+            });
+            actiPageHide.to('#acti-page', 0.4, {autoAlpha: 0})
+            .set('#acti-page', {display: 'none'})
         }
 
         $('#sign-btn').on('touchstart', showPassPage);
         $('#rule-btn').on('touchstart', showRule);
         $('#close-rule').on('touchstart', closeRule);
         $('#close-password').on('touchstart', closePassPage);
-        $('#get-password').on('touchstart', function () {
+        $('#go-buy').on('touchstart', function () {
             location.href = 'http://wsh.gaopeng.com/yanzhiwu1';
         });
+        $('#get-password').on('touchstart', showActiPage);
+        $('#back-sign').on('touchstart', closeActiPage);
         $('#close-qr').on('touchstart', closeAttention);
 
         // 报名跳转

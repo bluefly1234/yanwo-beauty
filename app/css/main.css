@@ -360,6 +360,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
   overflow-y: scroll;
   /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
@@ -1158,7 +1159,7 @@ body {
   left: 0;
 }
 
-#rule, #password-page, #qr-page {
+#rule, #password-page, #qr-page, #acti-page {
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -1263,7 +1264,29 @@ body {
   left: -56px;
 }
 
-#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page, #qr-page {
+#acti-des {
+  width: 680px;
+  height: 2400px;
+  background-image: url("../images/acti-des.jpg");
+}
+
+#go-buy {
+  bottom: 120px;
+  left: 122px;
+  width: 177px;
+  height: 53px;
+  background-image: url("../images/buy.png");
+}
+
+#back-sign {
+  bottom: 120px;
+  left: 371px;
+  width: 177px;
+  height: 53px;
+  background-image: url("../images/back-sign.png");
+}
+
+#cover, #page2, #page3, #page4, #page56, #page5, #page6, #bird, #rule, #password-page, #qr-page, #acti-page {
   display: none;
 }
 
