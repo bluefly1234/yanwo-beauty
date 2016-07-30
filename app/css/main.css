@@ -368,12 +368,12 @@ body {
 
 /*=================misc start=======================*/
 .misc-sprite, .misc-music-bg, #music-control-main, .misc-music-icon, .music-control-icon, .misc-up {
-  background-image: url('../images/misc-sa66909f32a.png');
+  background-image: url('../images/misc-s39ec80f775.png');
   background-repeat: no-repeat;
 }
 
 .misc-music-bg, #music-control-main {
-  background-position: 0 -50px;
+  background-position: 0 -80px;
   height: 58px;
   width: 58px;
 }
@@ -385,9 +385,9 @@ body {
 }
 
 .misc-up {
-  background-position: -19px 0;
-  height: 50px;
-  width: 29px;
+  background-position: 0 -31px;
+  height: 49px;
+  width: 64px;
 }
 
 #arrow-up {
@@ -1190,10 +1190,10 @@ body {
 }
 
 #confirm {
-  top: 115px;
-  left: 118px;
+  top: 112px;
+  left: 110px;
   width: 359px;
-  height: 50px;
+  height: 40px;
   background-image: url("../images/confirm.png");
 }
 
@@ -1217,18 +1217,18 @@ body {
 }
 
 #close-password {
-  top: 320px;
-  left: 258px;
+  top: 334px;
+  left: 250px;
   width: 38px;
   height: 38px;
   background-image: url("../images/close-password.png");
 }
 
 #get-password {
-  top: 244px;
-  left: 118px;
-  width: 359px;
-  height: 50px;
+  top: 240px;
+  left: 102px;
+  width: 371px;
+  height: 68px;
   background-image: url("../images/get-password.png");
 }
 
@@ -1266,21 +1266,21 @@ body {
 
 #acti-des {
   width: 680px;
-  height: 2400px;
+  height: 2414px;
   background-image: url("../images/acti-des.jpg");
 }
 
 #go-buy {
-  bottom: 120px;
-  left: 122px;
-  width: 177px;
-  height: 53px;
+  top: 610px;
+  left: 228px;
+  width: 235px;
+  height: 68px;
   background-image: url("../images/buy.png");
 }
 
 #back-sign {
   bottom: 120px;
-  left: 371px;
+  left: 263px;
   width: 177px;
   height: 53px;
   background-image: url("../images/back-sign.png");

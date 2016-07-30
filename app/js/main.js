@@ -17,7 +17,7 @@ var page5SlideUpIn;
 
 // 预加载
 var sourceArr = [
-    'images/acti-des.png',
+    'images/acti-des.jpg',
     'images/back-sign.png',
     'images/bird-s8cbbc68603.png',
     'images/buy.png',
@@ -30,7 +30,7 @@ var sourceArr = [
     'images/go-sign.png',
     'images/go-sign2.png',
     'images/logo.png',
-    'images/misc-sa66909f32a.png',
+    'images/misc-s39ec80f775.png',
     'images/page2-bg.jpg',
     'images/page2-sf45919eb87.png',
     'images/page3-bg.jpg',

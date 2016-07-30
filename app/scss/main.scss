@@ -689,8 +689,8 @@ $bird-sprite-dimensions: true;
 }
 
 #confirm {
-    top: 115px;
-    left: 118px;
+    top: 112px;
+    left: 110px;
     $confirm: '../images/confirm.png';
     width: image-width($confirm);
     height: image-height($confirm);
@@ -720,8 +720,8 @@ $bird-sprite-dimensions: true;
 }
 
 #close-password {
-    top: 320px;
-    left: 258px;
+    top: 334px;
+    left: 250px;
     $close-password: '../images/close-password.png';
     width: image-width($close-password);
     height: image-height($close-password);
@@ -729,8 +729,8 @@ $bird-sprite-dimensions: true;
 }
 
 #get-password {
-    top: 244px;
-    left: 118px;
+    top: 240px;
+    left: 102px;
     $get-password: '../images/get-password.png';
     width: image-width($get-password);
     height: image-height($get-password);
@@ -779,8 +779,8 @@ $bird-sprite-dimensions: true;
 }
 
 #go-buy {
-    bottom: 120px;
-    left: 122px;
+    top: 610px;
+    left: 228px;
     $buy: '../images/buy.png';
     width: image-width($buy);
     height: image-height($buy);
@@ -789,7 +789,7 @@ $bird-sprite-dimensions: true;
 
 #back-sign {
     bottom: 120px;
-    left: 371px;
+    left: 263px;
     $back-sign: '../images/back-sign.png';
     width: image-width($back-sign);
     height: image-height($back-sign);
